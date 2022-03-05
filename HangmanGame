@@ -1,0 +1,53 @@
+print('*********************************')
+print('***Welcome to the Hangman Game***')
+print('*********************************')
+
+print('\n \n ')
+
+print('Welcome to the Hangman Game \n \nTry to guess the word by choosing a letter \n \nYou have 10 chances, be careful or you are gone be hanged :P! \n ')
+
+import random
+
+list_of_words = ['banana', 'orange', 'computer', 'pyhton', 'principle', 'science', 'factory', 'struggle', 'subordination', 'president', 'scramble', 
+                 'coverage', 'invasion', 'baseball', 'weight']
+secret_word = random.choice(list_of_words)
+mistakes = 0 
+gaps_number = len(secret_word)
+gaps1 = "_" * int(gaps_number)
+gaps = list(gaps1)
+right_words = gaps
+
+guessed = False
+hanged = False
+chances = 10
+count_chances = 9
+
+
+
+while(not guessed and not hanged):
+  guess = input('Try a letter: \nR:')
+  
+  if (guess in secret_word):
+  
+    position = 0
+    for letter in secret_word:
+      if (guess.upper() == letter.upper()):
+        right_words[position] = letter
+      position += 1
+                
+  else:
+    mistakes +=1
+    counter = print("You have {} chances of {}".format(count_chances, chances))
+    counter = count_chances = count_chances - 1
+
+  hanged = mistakes == chances
+  guessed = '_' not in gaps
+  print('\n')
+  print(right_words)
+  print('\n')
+
+if hanged:
+  print('You lose :(! Try again!')
+elif guessed:
+  print('Congratulations! You won :)!')
+print('Game Over!')
