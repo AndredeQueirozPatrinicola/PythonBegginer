@@ -1,12 +1,12 @@
 import math
 
-side_1 = int(input('Put the size of one side of your triangle: '))
-side_2 = int(input('Another side: '))
-side_3 = int(input('And another one: '))
+side_1 = float(input('Put the size of one side of your triangle: '))
+side_2 = float(input('Another side: '))
+side_3 = float(input('And another one: '))
 
-ang_1 = int(input('Now put the angle of the first side with the second: '))
-ang_2 = int(input('Side 2 with side 3: '))
-ang_3 = int(input('Side 3 with side 1: '))
+ang_1 = float(input('Now put the angle of the first side with the second: '))
+ang_2 = float(input('Side 2 with side 3: '))
+ang_3 = float(input('Side 3 with side 1: '))
 
 a = side_1
 b = side_2
