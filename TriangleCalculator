@@ -32,7 +32,7 @@ if d + e + f == 180:
         herons = (a + b + c) / 2 
         h = herons
         area = math.sqrt(h*(h - a)*(h - b)*(h - c))
-        area_format = "{:.3f}".format(area)
+        area_format = "{:.2f}".format(area)
         print("The area is:", area_format)
     if d == 90 or e == 90 or f == 90:
         print("It's a right triangle")
@@ -57,7 +57,7 @@ if d + e + f == 180:
         herons = (a + b + c) / 2 
         h = herons
         area = math.sqrt(h*(h - a)*(h - b)*(h - c))
-        area_format = "{:.3f}".format(area)
+        area_format = "{:.2f}".format(area)
         print("The area is:", area_format)
 else:
     print("Angles not compatible with a triangle.")
