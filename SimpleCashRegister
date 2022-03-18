@@ -2,6 +2,8 @@ print('Welcome to the grocery store')
 
 start = input("Let's start some shopping? [Yes] [No]: ")
 
+print("Type 0 to end the shopping")
+
 while start == 'Yes' or start == 'yes' or start == "y" or start == "Y":
 
     count = 1
