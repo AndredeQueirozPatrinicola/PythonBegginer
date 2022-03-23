@@ -45,9 +45,6 @@ hanged = False
 count_chances = 9
 
 
-
-
-
 while(not guessed and not hanged):
   guess = input('Try a letter: \nR:')
   
