@@ -16,17 +16,17 @@ while cond == 0:
     if lenght == "Long" or lenght == "long" or lenght == "l":
         rounds = 7
         dif = "long"
-        print(f"You choosed {dif} match lenght")
+        print(f"You choosed a {dif} match")
         cond += 1
     elif lenght == "Medium" or lenght == "medium" or lenght == "m":
         rounds = 5
         dif = "medium"
-        print(f"You choosed {dif} match lenght")
+        print(f"You choosed a {dif} match")
         cond += 1
     elif lenght == "short" or lenght == "Short" or lenght == "s":
         rounds = 3
         dif = "short"
-        print(f"You choosed {dif} match lenght")
+        print(f"You choosed a {dif} match")
         cond += 1
     else:
         print("Type a valid dificulty")
