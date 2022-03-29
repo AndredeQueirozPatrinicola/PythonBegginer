@@ -1,9 +1,9 @@
-print('Rock, Paper, Scissor')
+print('Rock, Paper, Scissors')
 
 
 import random
 
-game = ['rock', 'paper', "scissor" ]
+game = ['rock', 'paper', "scissors" ]
 points = 0
 ai_points = 0
 defeat = False
@@ -30,15 +30,15 @@ while cond == 0:
         cond += 1
     else:
         print("Type a valid dificulty")
-        lenght = input("Type [Easy], [Medium] or [Hard] to set the dificulty: ")
+        lenght = input("Type [Long], [Medium] or [Short] to set match lenght: ")
 
 while not defeat and not victory:
     
-    play = input('Choose rock, paper or scissor: ')
+    play = input('Choose rock, paper or scissors: ')
     
     ai_play = random.choice(game)
     
-    if play == 'rock' and ai_play == 'scissor':
+    if play == 'rock' and ai_play == 'scissors':
         print(f'Ai choosed {ai_play}')
         print('You won this round!')
         points += 1
@@ -48,12 +48,12 @@ while not defeat and not victory:
         print('You won this round!')
         points += 1
         print(f'You: {points} - Computer: {ai_points}')
-    elif play == 'scissor' and ai_play == 'paper':
+    elif play == 'scissors' and ai_play == 'paper':
         print(f'Ai choosed {ai_play}')
         print('You won this round!')
         points += 1
         print(f'You: {points} - Computer: {ai_points}')
-    elif ai_play == 'rock' and play == 'scissor':
+    elif ai_play == 'rock' and play == 'scissors':
         print(f'Ai choosed {ai_play}')
         print('You lost this round')
         ai_points += 1
@@ -63,7 +63,7 @@ while not defeat and not victory:
         print('You lost this round')
         ai_points += 1
         print(f'You: {points} - Computer: {ai_points}')
-    elif ai_play == 'scissor' and play == 'paper':
+    elif ai_play == 'scissors' and play == 'paper':
         print(f'Ai choosed {ai_play}')
         print('You lost this round')
         ai_points += 1
@@ -73,7 +73,7 @@ while not defeat and not victory:
         print('It tied!')
         print(f'You: {points} - Computer: {ai_points}')
     else:
-        print('Please, type rock, paper or scissor')
+        print('Please, type rock, paper or scissors')
         
     defeat = ai_points == rounds
     victory = points == rounds
